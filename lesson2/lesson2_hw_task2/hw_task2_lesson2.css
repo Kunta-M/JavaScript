@@ -1,0 +1,12 @@
+.post_card{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.post_card div{
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin: 5px 5px;
+}
