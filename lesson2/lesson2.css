@@ -1,0 +1,28 @@
+.target{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.target img {
+    width: 180px;
+    height: 270px;
+}
+
+.simpson_style{
+    margin-top: 30px;
+}
+
+.simpson_style img{
+    width: 180px;
+    height: 300px;
+}
+
+.product_style h3{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.product_style img{
+    width: 200px;
+    height: 250px;
+}
