@@ -1,6 +1,7 @@
 .target{
     font-size: 20px;
     font-weight: bold;
+    padding: 20px 80px;
 }
 
 .target img {
@@ -10,6 +11,11 @@
 
 .simpson_style{
     margin-top: 30px;
+    padding: 20px 100px;
+}
+
+.simpson_style p{
+    font-size: 18px;
 }
 
 .simpson_style img{
