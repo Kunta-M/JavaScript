@@ -170,28 +170,30 @@ document.write('<div>')
 let step = 0;
 for (let k = 0; k < 100; k++) {
     console.log(step);
-    document.write(`<div>${step}</div>`)
+    document.write(`<div>${step}</div>`);
     step += 2
 }
 document.write('</div>')
 
 // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
-
+document.write('<div>')
 for (let k = 0; k < 100; k++) {
     if (k % 2 === 0){
         console.log(k);
         document.write(`<div>${k}</div>`)
     }
 }
+document.write('</div>')
 
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
-
+document.write('<div>')
 for (let k = 0; k < 100; k++) {
     if (k % 2){
         console.log(k);
         document.write(`<div>${k}</div>`)
     }
 }
+document.write('</div>')
 
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
@@ -231,7 +233,7 @@ for (const user of usersWithId) {
     for (const city of citiesWithId){
         if (user.id === city.user_id){
             user.name === city;
-            result.push(user.name + city.city)
+            result.push(user.name + user.age + user.status + city.country + city.city)
         }
     }
 }
