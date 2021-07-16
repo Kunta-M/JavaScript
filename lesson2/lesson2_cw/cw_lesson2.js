@@ -232,8 +232,8 @@ let result = []
 for (const user of usersWithId) {
     for (const city of citiesWithId){
         if (user.id === city.user_id){
-            user.name === city;
-            result.push(user.name + user.age + user.status + city.country + city.city)
+            user.address = city;
+            result.push(usersWithId)
         }
     }
 }
