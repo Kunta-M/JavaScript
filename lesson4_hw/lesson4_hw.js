@@ -33,12 +33,11 @@ console.log(result);
 // - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) . за допомоги map та колбеку перетворити всі об'єкти в масиві на срінгові.
 
 let rNums1 = [1, 3, 10, 70, 9, 43]
-let value = String
-let newMap = rNums1.map (function (value){
-    return rNums1.length
-})
 
-console.log(rNums1);
+let newMap = rNums1.map (function (value) {
+    return value.toString()
+})
+console.log(newMap);
 
 
 // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
