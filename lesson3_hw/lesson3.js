@@ -76,9 +76,9 @@ createUl('owu')
 
 // створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-let elements = [1,2,3,'hello', true];
-function map (element){
-    return element.length
-}
+let nums = [1,2,3];
+let str = ['hi', 'hey', 'hallo']
 
-console.log(elements);
+let newMassive = nums.concat(str)
+console.log(newMassive);
+
