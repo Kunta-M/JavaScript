@@ -13,8 +13,8 @@ function getAreaCircle (r) {
     return Math.PI * Math.pow(r, 2);
 }
 
-let SCirle = Math.PI * Math.pow(4, 2 )
-console.log(SCirle);
+let sCircle = Math.PI * Math.pow(4, 2);
+console.log(sCircle);
 
 // створити функцію яка обчислює та повертає площу циліндру
 
@@ -53,11 +53,32 @@ createDiv('Текст задати через аргумент')
 
 // створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
 
+document.write('<ul>')
 
+function createList (msg){
+    let li = 'owu'
+    for (let i = 0; i <3; i++)
+        document.write(`<li>${msg}</li>`)
+}
 
+createList('owu')
+document.write('</ul>')
 
 // створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 
+function createUl (msg){
+    let li = 'owu'
+    for (let i = 0; i <3; i++)
+    document.write(`<ul>${li}</ul>`)
+}
 
+createUl('owu')
 
 // створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+
+let elements = [1,2,3,'hello', true];
+function map (element){
+    return element.length
+}
+
+console.log(elements);
