@@ -122,8 +122,15 @@ console.log(getKeys(massive));
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
 
 let massive1 = [{name: 'Dima', age: 13}, {model: 'Camry'}];
-function getValue () {
-    let array = [];{
+
+function getValues(arr) {
+    let array = [];
+    for (const massive1Element of arr) {
+        for (const key in massive1Element) {
+            array.push(massive1Element[key])
+        }
     }
+    return array
 }
 
+console.log(getValues(massive1))
