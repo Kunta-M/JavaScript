@@ -38,7 +38,8 @@ for (const fcListElement of fcList) {
     }
 }
 
-
-
 // -- поміняти колір тексту у всіх елементів fc_rules на червоний
-
+let fcList2 = document.getElementsByClassName('fc_rules')
+for (const fcListElement of fcList2) {
+    fcListElement.style.color = 'red'
+}
