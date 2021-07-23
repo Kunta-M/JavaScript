@@ -58,29 +58,33 @@ function Cars(model, producer, year, maxSpeed, capacity, someFn, infoFn) {
     this.capacity = capacity;
     this.drive = someFn;
     this.info = infoFn;
-    this.increaseMaxSpeed = function (newSpeed) {this.maxSpeed = newSpeed};
+    this.increaseMaxSpeed = function (newSpeed) {this.maxSpeed += newSpeed};
     this.changeYear = function (newValue) {this.year = newValue};
+    this.addDriver = function (driver){
+        this.driver = driver
+    }
 
 }
 
-let vw = new Cars('golf', 'GE', 2016, 160, 1.6,
+let vw = new Cars ('golf', 'GE', 2016, 160, 1.6,
     function drive() {console.log(`їдемо зі швидкістю ${this.maxSpeed} км на годину`)},
 
-    function () {console.log(`Model - ${this.model}, Producer - ${this.producer}, Year - ${this.year}, max speed - ${this.maxSpeed}, 
-    capacity - ${this.capacity}`)},
+    function () {console.log(`Model - ${this.model}, Producer - ${this.producer}, Year - ${this.year}, max speed 
+    - ${this.maxSpeed}, capacity - ${this.capacity}`)},
 
-    function (newSpeed){this.maxSpeed = newSpeed},
+    function (newSpeed){this.maxSpeed += newSpeed},
 
     function (newValue){this.year = newValue},
-)
 
-let driver = {name: 'Ivan', age: 42, workExperience: 13}
+    function (driver) {this.driver = driver}
+)
 
 console.log(vw);
 vw.drive();
 vw.info();
-vw.increaseMaxSpeed(220);
+vw.increaseMaxSpeed(80);
 vw.changeYear(2018);
+vw.addDriver({name: 'Ivan', age: 38, workExperience: 13})
 console.log(vw);
 
 // - (Те саме, тільки через клас)
@@ -108,6 +112,8 @@ class Car {
     increaseMaxSpeed(newSpeed) {this.maxSpeed = newSpeed};
 
     changeYear(newValue) {this.year = newValue};
+
+    addDriver(driver) {this.driver = driver}
 }
 
 let honda = new Car('accord', 'Japan', 2013, 160, 3,)
@@ -116,6 +122,7 @@ console.log(honda);
 honda.drive();
 honda.increaseMaxSpeed(280);
 honda.changeYear(2019);
+honda.addDriver({name: 'Ivan', age: 38, workExperience: 13})
 console.log(honda);
 
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
