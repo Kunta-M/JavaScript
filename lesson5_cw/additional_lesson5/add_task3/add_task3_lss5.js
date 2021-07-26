@@ -125,15 +125,11 @@ let users2 = [{
 
 for (const users2Element of users2) {
         const userDiv = document.createElement('div');
+            userDiv.innerText = `${users2Element.name} ${users2Element.age} ${users2Element.status} 
+            ${users2Element.address.city} ${users2Element.address.country} ${users2Element.address.street}`
 
-        let address = ``;
-        for (const addressElement in users2Element.address) {
-            address = address + "  " + users2Element.address[addressElement];
-
-            userDiv.innerText = `${users2Element.name} ${users2Element.age} ${users2Element.status} ${address}`
             let usersInfo = document.getElementById('users_info')
             usersInfo.appendChild(userDiv);
-        }
 }
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)
@@ -211,10 +207,7 @@ for (const users3Element of users3) {
     p2.innerText = users3Element.status;
     p3.innerText = address;
 
-    div.appendChild(h2);
-    div.appendChild(p1);
-    div.appendChild(p2);
-    div.appendChild(p3);
+    div.append(h2, p1, p2, p3);
     document.body.appendChild(div)
 }
 
@@ -294,9 +287,6 @@ for (const users4Element of users4) {
     age.innerText = users4Element.age;
     status.innerText = users4Element.status;
 
-    div.appendChild(name);
-    div.appendChild(age);
-    div.appendChild(status);
-    div.appendChild(address);
+    div.append(name, age, status, address);
     document.body.appendChild(div)
 }
