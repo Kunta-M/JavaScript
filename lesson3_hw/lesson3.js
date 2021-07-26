@@ -76,9 +76,20 @@ createUl('owu')
 
 // створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-let nums = [1,2,3];
-let str = ['hi', 'hey', 'hallo']
+let elements = [1,2,3,'hi','hey','hallo'];
 
-let newMassive = nums.concat(str)
-console.log(newMassive);
+document.write('<ul>')
+function elementsList (array) {
+    let arr = [];
+    for (const elemElement of array) {
+        arr.push (`<li>${elemElement}</li>`)
+    }return arr
+}
+
+document.write(elementsList(elements));
+document.write('</ul>')
+
+
+
+
 
