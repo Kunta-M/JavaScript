@@ -5,10 +5,11 @@
 let login = document.forms.login;
 let nameInput = login.name;
 
-login.addEventListener('click', () => {
+login.addEventListener('click', (ev) => {
     let name = nameInput.value;
     let user = {name: name};
 
     let jsonUser = JSON.stringify(user);
     localStorage.setItem('user', jsonUser);
 });
+
