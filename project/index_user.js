@@ -14,7 +14,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         for (const user of value) {
             console.log(user)
 
-            const userDiv = document.createElement('h4');
+            const userDiv = document.createElement('h3');
 
             const link = document.createElement('div')
             const linkDetails = document.createElement('a');
