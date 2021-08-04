@@ -20,20 +20,24 @@
 
     const userDtls = document.getElementById('user-box');
 
-    let userInfo = document.createElement('div')
-    userInfo.innerText = `${user.id}. ${user.name}
+    let userMain = document.createElement('h4');
+    userMain.innerText = `${user.id}. ${user.name}
     Username: ${user.username}
     e-mail: ${user.email}
-    Address
+    phone: ${user.phone}
+    website: ${user.website}`
+
+    let userAddress = document.createElement('p');
+    userAddress.innerText = `Address
     street: ${user.address.street} ${user.address.suite}
     city: ${user.address.city}
     zipcode: ${user.address.zipcode}
-        Geo
-            lat: ${user.address.geo.lat}
-            lng: ${user.address.geo.lng}
-    phone: ${user.phone}
-    website: ${user.website}
-    Company
+    Geo
+    lat: ${user.address.geo.lat}
+    lng: ${user.address.geo.lng}`
+
+    let userCompanyInfo = document.createElement('p');
+    userCompanyInfo.innerText = `Company
     name: ${user.company.name}
     catchPhrase: ${user.company.catchPhrase}
     bs: ${user.company.bs}`
@@ -63,7 +67,7 @@
         })
     })
 
-    userDtls.append(userInfo, btn)
+    userDtls.append(userMain, userAddress, userCompanyInfo, btn)
 
 
 
