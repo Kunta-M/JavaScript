@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="style_index.css">
 </head>
 <body>
 
@@ -21,26 +23,17 @@
     const userDtls = document.getElementById('user-box');
 
     let userMain = document.createElement('h4');
-    userMain.innerText = `${user.id}. ${user.name}
-    Username: ${user.username}
-    e-mail: ${user.email}
-    phone: ${user.phone}
-    website: ${user.website}`
+    userMain.innerHTML = `${user.id}. ${user.name} <br>username: ${user.username} <br>e-mail: ${user.email} <br>phone:
+    ${user.phone} <br>website: ${user.website}`
 
     let userAddress = document.createElement('p');
-    userAddress.innerText = `Address
-    street: ${user.address.street} ${user.address.suite}
-    city: ${user.address.city}
-    zipcode: ${user.address.zipcode}
-    Geo
-    lat: ${user.address.geo.lat}
-    lng: ${user.address.geo.lng}`
+    userAddress.innerHTML = `Address <br>street: ${user.address.street} ${user.address.suite} <br>city:
+    ${user.address.city} <br>zipcode: ${user.address.zipcode} <br>Geo <br>lat: ${user.address.geo.lat}
+    <br>lng: ${user.address.geo.lng}`
 
     let userCompanyInfo = document.createElement('p');
-    userCompanyInfo.innerText = `Company
-    name: ${user.company.name}
-    catchPhrase: ${user.company.catchPhrase}
-    bs: ${user.company.bs}`
+    userCompanyInfo.innerHTML = `Company <br>name: ${user.company.name} <br>catchPhrase: ${user.company.catchPhrase}
+    <br>bs: ${user.company.bs}`
 
     const btn = document.createElement('button');
     btn.innerText = 'post of current user'
@@ -52,6 +45,7 @@
             const postDiv = document.getElementsByClassName('posts-box')[0];
             postDiv.innerHTML = '';
             for (const post of posts) {
+
                 let postTitle = document.createElement('h4');
                 postTitle.innerText = post.title;
 
