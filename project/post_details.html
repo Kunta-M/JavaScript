@@ -9,7 +9,38 @@
 </head>
 <body>
 
-<script></script>
+<div id="posts-details"></div>
+
+<ul class="comments-box"></ul>
+
+<script>
+
+    const JSONPost = new URL(location).searchParams.get('post');
+    const post = JSON.parse(JSONPost);
+
+    const postsDtls = document.getElementById('posts-details');
+    let postInfo = document.createElement('p');
+    postInfo.innerText = `${post.userId} - ${post.id}. ${post.title}
+    ${post.body}`
+
+    postsDtls.append(postInfo);
+
+    const commentsBox = document.getElementsByClassName('comments-box')[0];
+
+    fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
+    .then(value => value.json())
+    .then(comments =>{
+        for (const commentEl of comments) {
+            const comment = document.createElement('li');
+            comment.innerText = commentEl.body;
+
+            commentsBox.append(comment)
+        }
+    })
+
+
+
+</script>
 
 </body>
 </html>

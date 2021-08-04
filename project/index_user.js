@@ -4,7 +4,7 @@
 // 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html, которая имеет детальную информацию про объект на который кликнули
 
 
-const mainUsersDiv = document.getElementById('users')
+const mainUsersDiv = document.getElementsByClassName('users')[0];
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(value => value.json())
