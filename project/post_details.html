@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<div id="posts-details"></div>
+<div class="posts-details"></div>
 
 <div class="comments-box"></div>
 
@@ -24,7 +24,9 @@
     const JSONPost = new URL(location).searchParams.get('post');
     const post = JSON.parse(JSONPost);
 
-    const postsDtls = document.getElementById('posts-details');
+    const postsDtls = document.getElementsByClassName('posts-details')[0];
+    postsDtls.innerText = '';
+
     let postInfo = document.createElement('p');
     postInfo.innerText = `${post.userId} - ${post.id}. ${post.title}
     ${post.body}`

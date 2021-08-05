@@ -55,10 +55,10 @@
 }
 
 .posts-box h4{
-    width: 15%;
+    width: 13%;
 }
 
-#posts-details{
+.posts-details{
     margin: 30px 30px;
     font-size: 25px;
 }
